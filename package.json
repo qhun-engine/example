@@ -1,0 +1,36 @@
+{
+  "name": "@qhun-engine/example",
+  "version": "0.0.1",
+  "description": "An example project for the qhun-engine",
+  "main": "server/GameServer.js",
+  "scripts": {
+    "start": "run-p start:server start:frontend",
+    "start:server": "ts-node src/server/GameServer.ts",
+    "start:frontend": "webpack --watch",
+    "build": "tsc -p ./tsconfig.build.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qhun-engine/example"
+  },
+  "author": "wartoshika <dev@qhun.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.12.12",
+    "copy-webpack-plugin": "^4.6.0",
+    "npm-run-all": "^4.1.5",
+    "ts-loader": "^5.3.1",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.1",
+    "webpack": "^4.27.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "@qhun-engine/base": "git+https://github.com/qhun-engine/base.git",
+    "@qhun-engine/engine": "git+https://github.com/qhun-engine/engine.git",
+    "@qhun-engine/server": "git+https://github.com/qhun-engine/server.git",
+    "express": "^4.16.4"
+  }
+}
